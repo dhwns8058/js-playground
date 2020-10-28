@@ -1,0 +1,25 @@
+<!--사용자가 입력한 숫자가 소수인지 아닌지 알려주는 프로그램을 작성해 봅시다.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = Number(prompt("2이상의 정수를 입력하시오."))
+        for(var i = 2; i < n; i++){
+            if(n % i === 0){
+                document.write(n + "은 소수가 아니다.")
+                console.log(i,n)
+                break;
+            } else {
+                document.write(n + "은 소수이다.")
+                console.log(i,n)
+                break;
+            }   
+        }
+    </script>
+</body>
+</html>
