@@ -1,0 +1,45 @@
+<!--요구사항
+main() 메소드는 프로그램을 시작하는 역할을 한다.
+함수를 구구단 객체의 메소드로 변경한다.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체를 활용한 구구단 전체 구현</title>
+</head>
+<body>
+    <h2>구구단 전체 구현</h2>
+    <script>
+
+        gugudan = {};
+        gugudan.result = [];
+        gugudan.current = -1;
+        gugudan.calculate = function(n) {
+            this.current = n;
+            for(var i = 0; i < 9; i++){
+                this.result[i] =  n * (i + 1);
+            }
+        };
+        gugudan.print = function() {
+            document.write("<h3>" + this.current + "단 </h3>" )
+            for(var i = 0; i < 9; i++){
+                var j = this.current;
+                var k = i + 1;
+                var l = this.result[i]
+                document.write(j + " X " + k + " = " + l + "<br>")
+            }
+        }
+        
+        function main(){
+            for(var i = 2; i <= 9; i++){
+                gugudan.calculate(i);
+                gugudan.print();
+            }
+        }
+        main();
+
+    </script>
+</body>
+</html>
