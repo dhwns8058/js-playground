@@ -10,3 +10,4 @@ btn2.onclick = readInput;;
 var test = document.getElementById("text2");
 test.appendChild(document.createElement("br"))
 test.appendChild(btn2);
+
